@@ -4,36 +4,22 @@ import "./home.css";
 
 // Images
 import hero from "../../assets/hero_image.png";
-import hero_image_back from "../../assets/hero_image_back.png";
-import Heart from "../../assets/heart.png";
-import Calories from "../../assets/calories.png";
 
 const Home = () => {
   return (
     <div className="hero">
       <div className="left-hand">
         <Hearder />
-        {/* Ad */}
-        <div className="ad">
-          <div></div>
-          <span>Get Your Work Done Faster</span>
-        </div>
         {/* Heading */}
         <div className="hero-text">
           {/* 1st Text */}
           <div>
-            <span className="stroke-Text">Shape </span>
+            <span className="stroke-Text">Get </span>
             <span>Your</span>
           </div>
           {/* 2nd Text */}
           <div>
-            <span>Ideal body</span>
-          </div>
-          <div>
-            <span>
-              In here we will help you to Shape and build your ideal body and
-              live up your life to the fullest.
-            </span>
+            <span>Work Done</span>
           </div>
         </div>
 
@@ -61,26 +47,13 @@ const Home = () => {
         </div>
         {/* End */}
       </div>
+
       <div className="right-hand">
-
-        <div className="heart-rate">
-          <img src={Heart} alt="" />
-          <span>Heart Rate</span>
-          <span>116 bpm</span>
-        </div>
-
         {/* Hero Images */}
+        <div className="hero-Image">
         <img src={hero} alt="" className="hero-image" />
-        <img src={hero_image_back} alt="" className="hero-image-back" />
-
-        {/* Calories */}
-        <div className="calories">
-          <img src={Calories} alt="" />
-          <div>
-            <span>100%</span>
-            <span>Done</span>
-          </div>
         </div>
+        {/* <img src={hero_image_back} alt="" className="hero-image-back" /> */}
       </div>
     </div>
   );

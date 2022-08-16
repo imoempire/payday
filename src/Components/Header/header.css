@@ -24,3 +24,13 @@
    color: var(--orange)
    
 }
+
+@media screen and (max-width: 414px) {
+   .logo {
+      width: 5rem;
+      height: 3rem;
+   }
+   .nav__menu {
+      display: none;
+   }
+}

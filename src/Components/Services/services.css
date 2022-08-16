@@ -3,7 +3,7 @@
    flex-direction: column;
    gap: 2rem;
    padding: 0rem 2rem;
-   height: 50vh;
+   /* height: 50vh; */
 }
 
 .Service-header {
@@ -20,6 +20,7 @@
 /* Card */
 .Services-category {
    display: flex;
+   flex-direction: row;
    gap: 1rem;
 }
 
@@ -62,4 +63,10 @@
 .category:hover {
    background:  var(--planCard);
    cursor: pointer;
+}
+
+@media screen and (max-width: 414px) {
+   .Services-category {
+      flex-direction: column;
+   }
 }

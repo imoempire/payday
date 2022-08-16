@@ -92,3 +92,10 @@
    border: none;
    outline: none;
 }
+
+@media screen and (max-width: 414px) {
+   .contact__form-group {
+      display: flex;
+      flex-direction: column;
+   }
+}
