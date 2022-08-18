@@ -1,11 +1,12 @@
 .header {
    display: flex;
    justify-content: space-between;
+   align-items: center;
 }
 
 .logo {
    width: 10rem;
-   height: 3rem;
+   height: 5rem;
 }
 
 /* Navbar */
@@ -16,12 +17,18 @@
    color: #fff;
 }
 
-.nav__menu>li {
+.nav__menu>li>a{
+   text-decoration: none;
+   list-style: none;
+   color: #fff;
+}
+
+.nav__menu>li>a {
    cursor: pointer;
 }
 
-.nav__menu>li:hover{
-   color: var(--orange)
+.nav__menu>li>a:hover{
+   color: var(--font-hover)
    
 }
 

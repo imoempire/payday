@@ -79,9 +79,9 @@
 }
 
 .hero-image {
-   /* position: absolute; */
+   position: absolute;
    top: 2rem;
-   right: 6rem;
+   right: -15rem;
    width: 23rem;
 }
 

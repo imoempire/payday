@@ -1,7 +1,7 @@
 import React from "react";
 import Hearder from "../Header/Hearder";
 import "./home.css";
-
+import CountUp from "react-countup";
 // Images
 import hero from "../../assets/hero_image.png";
 
@@ -26,15 +26,19 @@ const Home = () => {
         {/* Figures */}
         <div className="figures">
           <div>
-            <span>+140</span>
+            <span>
+              +<CountUp start={0} end={140} />
+            </span>
             <span>Workers</span>
           </div>
           <div>
-            <span>+978</span>
+            <span>
+              +<CountUp start={0} end={978} />
+            </span>
             <span>members</span>
           </div>
           <div>
-            <span>+50</span>
+            <span>+<CountUp start={0} end={50} /></span>
             <span>conections</span>
           </div>
         </div>
@@ -43,7 +47,7 @@ const Home = () => {
         {/* Buttons */}
         <div className="hero-buttons">
           <button className="btn">Get a Service</button>
-          <button className="btn">Join our Workers</button>
+          <button className="btn">Join our Team</button>
         </div>
         {/* End */}
       </div>
@@ -51,7 +55,7 @@ const Home = () => {
       <div className="right-hand">
         {/* Hero Images */}
         <div className="hero-Image">
-        <img src={hero} alt="" className="hero-image" />
+          <img src={hero} alt="" className="hero-image" />
         </div>
         {/* <img src={hero_image_back} alt="" className="hero-image-back" /> */}
       </div>

@@ -1,8 +1,10 @@
 import React from "react";
 import { programsData } from "../../data/programsData";
 import "./services.css";
+import { motion } from "framer-motion";
+import { homeAnimations, homeInfoAnimations } from "../../animation";
 
-import RightArrow from '../../assets/rightArrow.png'
+import RightArrow from "../../assets/rightArrow.png";
 
 const Services = () => {
   return (
@@ -13,21 +15,35 @@ const Services = () => {
         <span>Our Services</span>
         <span></span>
       </div>
-      <div className="Services-category">
+      <motion.div
+        variants={homeAnimations}
+        transition={{ delay: 0.3, duration: 0.6, type: "tween" }}
+        className="Services-category"
+      >
         {programsData.map((program) => {
           return (
-            <div className="category">
-              {program.image}
+            <div
+              className="category"
+              style={{
+                backgroundImage: `url(${program.backgroundImage})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              <div className="icon">
+                <div>{program.image}</div>
+              </div>
               <span>{program.heading}</span>
               <span>{program.details}</span>
               <div className="join-now">
-                <span>Join Now</span>
+                <span>More</span>
                 <img src={RightArrow} alt="" />
               </div>
             </div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };
