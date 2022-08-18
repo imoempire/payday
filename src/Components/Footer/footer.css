@@ -11,7 +11,6 @@
 }
 
 .Logo {
-   flex: 1;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -21,9 +20,8 @@
    width: 10rem;
    height: 3rem;
 }
-
 .Details {
-   flex: 3;
+   width: 100%;
    padding: 0 10rem;
 }
 
@@ -57,7 +55,7 @@
 }
 
 .contact__form-input::placeholder {
-   color: var(--orange)
+   color: var(--font-hover)
 }
 
 .contact__form-area {
@@ -77,10 +75,8 @@
    padding: 0.75rem;
    line-height: 1;
    border-radius: .5rem;
-   box-shadow: 0 0 1px rgb(0 0 0 / 0%);
    border: 1px solid transparent;
    color: #fff;
-   display: inline-block;
    background-color: rgba(0, 26, 255, 0.5);
    font-weight: var(--font-bold);
 }
@@ -91,11 +87,30 @@
    background-color: black;
    border: none;
    outline: none;
+   
 }
 
 @media screen and (max-width: 414px) {
+   .mail {
+      flex-direction: column;
+   }
+   .Details {
+      padding: 0;
+      flex: 1,  
+   }
+   .contact__form{
+      gap: .5rem,
+   }
    .contact__form-group {
       display: flex;
       flex-direction: column;
+      gap: .5rem;
+   }
+   .contact__form-input {
+      width: 10rem;
+      height: 3rem;
+   }
+   .contact__form-input::placeholder {
+      font-size: .5rem
    }
 }
